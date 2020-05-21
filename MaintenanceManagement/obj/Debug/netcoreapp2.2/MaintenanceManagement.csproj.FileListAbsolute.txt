@@ -1,0 +1,17 @@
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.csproj.CoreCompileInputs.cache
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.AssemblyInfoInputs.cache
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.AssemblyInfo.cs
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\MaintenanceManagement.deps.json
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\MaintenanceManagement.runtimeconfig.json
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\MaintenanceManagement.runtimeconfig.dev.json
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\MaintenanceManagement.dll
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\RabbitMQManagement.dll
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\RabbitMQManagement.pdb
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.csprojAssemblyReference.cache
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.RazorAssemblyInfo.cache
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.RazorAssemblyInfo.cs
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.RazorTargetAssemblyInfo.cache
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.csproj.CopyComplete
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\bin\Debug\netcoreapp2.2\MaintenanceManagement.pdb
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.dll
+C:\Users\jensb\Documents\Jaar 4\AfstuderenLight\MaintenanceManagement\MaintenanceManagement\obj\Debug\netcoreapp2.2\MaintenanceManagement.pdb
