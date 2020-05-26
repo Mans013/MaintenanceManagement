@@ -38,7 +38,8 @@ namespace MaintenanceManagement
             {
                 var list = new List<string>
                 {
-                    "#.maintenance.#"
+                    "#.maintenance.#",
+                    "#.car.#"
                 };
                 return new RabbitMQMessageHandler("localhost", "CarChamp", "maintenanceManagement", list);
             });

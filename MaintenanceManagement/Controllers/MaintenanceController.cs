@@ -34,6 +34,7 @@ namespace MaintenanceManagement.Controllers
         public ActionResult<MaintenanceModel> Post([FromBody] MaintenanceModel maintenance)
         {
             var newMaintenance = _maintenanceService.Create(maintenance);
+            _maintenanceService.Finish(maintenance);
             return Ok(JsonConvert.SerializeObject(newMaintenance));
         }
     }

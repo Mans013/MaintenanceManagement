@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using RabbitMQManagement;
 using System;
+using Newtonsoft.Json.Linq;
+using MongoDB.Bson;
 
 namespace MaintenanceManagement.Services
 {
@@ -27,7 +29,19 @@ namespace MaintenanceManagement.Services
         public MaintenanceModel Create(MaintenanceModel maintenance)
         {
             maintenances.InsertOne(maintenance);
-            _messagePublisher.PublishMessageAsync("Maintenance", maintenance, "maintenance.log");
+            return maintenance;
+        }
+
+        public MaintenanceModel Finish(MaintenanceModel maintenance)
+        { 
+            //Update maintenance
+            var filter = Builders<MaintenanceModel>.Filter.Eq("_id", ObjectId.Parse(maintenance.Id));
+            var update = Builders<MaintenanceModel>.Update.Set("Status", "Done");
+            maintenances.UpdateOne(filter, update);
+            //send message
+            //Object dataToSend = ("{ 'maintenance_id': '" + maintenance.Id + "',  'car_id': '" + maintenance.Car + "', 'Description': '" + maintenance.Description + "' }");
+            _messagePublisher.PublishMessageAsync("MaintenanceDone", maintenance, "maintenance.log");
+
             return maintenance;
         }
     }

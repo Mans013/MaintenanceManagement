@@ -37,8 +37,8 @@ namespace MaintenanceManagement.Manager
             {
                 switch (messageType)
                 {
-                    case "Getboilerplate":
-                        _maintenanceService.Create(MessageSerializer.Deserialize<MaintenanceModel>(message));
+                    case "MaintenancePlanned":
+                        Console.WriteLine(message);
                         break;
                 }
             }
