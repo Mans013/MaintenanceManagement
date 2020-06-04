@@ -11,19 +11,40 @@ namespace MaintenanceManagement.Services
 {
     public class MaintenanceService
     {
-        private readonly IMongoCollection<MaintenanceModel> maintenances;
+        private IMongoCollection<MaintenanceModel> maintenances;
         RabbitMQMessagePublisher _messagePublisher;
-        public MaintenanceService(IConfiguration config, RabbitMQMessagePublisher messagePublisher)
+        public MaintenanceService(RabbitMQMessagePublisher messagePublisher)
         {
-            var client = new MongoClient(config.GetConnectionString("CarChampDb"));
+            var client = new MongoClient("mongodb://localhost:27017/");
             var database = client.GetDatabase("CarChampDb");
             maintenances = database.GetCollection<MaintenanceModel>("maintenances");
             this._messagePublisher = messagePublisher;
         }
 
+        public void changeToTestService()
+        {
+            var client = new MongoClient("mongodb://localhost:27017/");
+            var database = client.GetDatabase("CarChampDb");
+            maintenances = database.GetCollection<MaintenanceModel>("maintenanceTest");
+        }
+
         public List<MaintenanceModel> Get()
         {
             return maintenances.Find(maintenance => true).ToList();
+        }
+
+        public MaintenanceModel GetById(string id)
+        {
+            var filter = Builders<MaintenanceModel>.Filter.Eq("_id", ObjectId.Parse(id));
+            var result = maintenances.Find(filter).FirstOrDefault();
+            return result;
+        }
+
+        public List<MaintenanceModel> GetByProperty(string property, string value)
+        {
+            var filter = Builders<MaintenanceModel>.Filter.Eq(property, value);
+            var result = maintenances.Find(filter).ToList();
+            return result;
         }
 
         public MaintenanceModel Create(MaintenanceModel maintenance)
@@ -33,7 +54,7 @@ namespace MaintenanceManagement.Services
         }
 
         public MaintenanceModel Finish(MaintenanceModel maintenance)
-        { 
+        {
             //Update maintenance
             var filter = Builders<MaintenanceModel>.Filter.Eq("_id", ObjectId.Parse(maintenance.Id));
             var update = Builders<MaintenanceModel>.Update.Set("Status", "Done");

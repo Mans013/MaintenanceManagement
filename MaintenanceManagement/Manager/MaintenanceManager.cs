@@ -40,6 +40,9 @@ namespace MaintenanceManagement.Manager
                     case "MaintenancePlanned":
                         Console.WriteLine(message);
                         break;
+                    case "LimitTest":
+                        Console.WriteLine(message);
+                        break;
                 }
             }
             catch (Exception ex)
